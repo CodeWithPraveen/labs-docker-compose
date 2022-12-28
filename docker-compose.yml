@@ -1,0 +1,23 @@
+﻿services:
+  sqldb:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: brezyweather-db
+    ports:
+      - 5001:1433
+    environment:
+      ACCEPT_EULA: Y
+      MSSQL_USER: sa
+      MSSQL_SA_PASSWORD: Password@123
+  app:
+    image: brezyweather:1.0.0
+    container_name: brezyweather-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 5002:80
+    depends_on:
+      - sqldb
+networks:
+  default:
+    name: brezyweather-network
