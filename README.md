@@ -21,3 +21,6 @@ The BrezyWeather is a simple .NET Core web app used as a demo project in this la
 - Basic knowledge of Docker Compose CLI commands. 
 - Familiarity with SQL Server and SQL queries. 
 - Familiarity with container concepts.
+
+## Learn More & Enroll:
+https://www.udemy.com/labs/create-and-manage-multi-container-apps-with-docker-compose-2/overview/
